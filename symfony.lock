@@ -362,6 +362,9 @@
             "tests/bootstrap.php"
         ]
     },
+    "symfony/polyfill-ctype": {
+        "version": "v1.15.0"
+    },
     "symfony/polyfill-intl-grapheme": {
         "version": "v1.15.0"
     },
@@ -375,6 +378,9 @@
         "version": "v1.15.0"
     },
     "symfony/polyfill-mbstring": {
+        "version": "v1.15.0"
+    },
+    "symfony/polyfill-php72": {
         "version": "v1.15.0"
     },
     "symfony/polyfill-php73": {
