@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ smartform_init() }}
+{% endblock %}
+
+{% block body %}
+    <h1>Existing addresses</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">RÚIAN ID</th>
+                <th scope="col">Address</th>
+                <th scope="col">Zip code</th>
+                <th scope="col">GPS latitude</th>
+                <th scope="col">GPS longitude</th>
+                <th scope="col">District</th>
+                <th scope="col">Region</th>
+                <th scope="col">Country</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for address in addresses %}
+            <tr>
+                <th scope="row">{{ address.code }}</th>
+                <td>{{ address }}</td>
+                <td>{{ address.zipCode }}</td>
+                <td>{{ address.latitude }}</td>
+                <td>{{ address.longitude }}</td>
+                <td>{{ address.district }}</td>
+                <td>{{ address.region }}</td>
+                <td>{{ address.country }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>Add a new address</h1>
+    {{ form_start(address_form) }}
+    {% if address_form.address.vars.errors.count %}
+        <small class="form-text text-danger">
+            Adresa není platná
+        </small>
+    {% endif %}
+    Adresa
+    {{ form_widget(address_form.address) }}
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    {{ form_end(address_form) }}
+{% endblock %}

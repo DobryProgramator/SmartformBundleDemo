@@ -1,4 +1,7 @@
 {
+    "dobryprogramator/smartform-bundle": {
+        "version": "dev-master"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -89,6 +92,9 @@
     },
     "egulias/email-validator": {
         "version": "2.1.17"
+    },
+    "holicz/simple-exception": {
+        "version": "v1.1.2"
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
@@ -516,6 +522,9 @@
     },
     "symfony/yaml": {
         "version": "v5.0.7"
+    },
+    "thecodingmachine/safe": {
+        "version": "v1.1"
     },
     "twig/extra-bundle": {
         "version": "v3.0.3"
